@@ -32,20 +32,15 @@ function App() {
                         justifyContent: "center",
                         //color name importent-text
                         // background: "#4EB785",
-                        background: "#AFAFFF",
+                        // background: "#AFAFFF",
+                        background: "#fff",
+                        // background: "#262626",
                     }}
                 >
                     <Lottie options={lottieOption} height={300} width={300} />
                 </div>
             ) : (
-                <div className="App">
-                    <h1> Hi, All</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi repudiandae aliquam dolores laboriosam
-                        dignissimos! Aliquid odit voluptas eos veritatis cum.
-                    </p>
-                </div>
+                <h1> Hi, All</h1>
             )}
         </>
     );
