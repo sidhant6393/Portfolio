@@ -15,7 +15,7 @@ const lottieOption = {
 
 function App() {
     const [loding, setLoding] = useState(true);
-    const [theme, setTheme] = useState(lightTheme);
+    const [theme, setTheme] = useState(darkTheme);
 
     useEffect(() => {
         setTimeout(() => {
