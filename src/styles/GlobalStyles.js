@@ -10,4 +10,8 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Jaldi', sans-serif;
     }
 
+    body{
+        overflow-x: hidden;
+    }
+
 `;
