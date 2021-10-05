@@ -22,7 +22,7 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             setLoding(false);
-        }, 0);
+        }, 6000);
     }, []);
 
     return (
@@ -40,7 +40,7 @@ function App() {
                     <Lottie options={lottieOption} height={300} width={300} />
                 </div>
             ) : (
-                <SectionOne />
+                <SectionOne theme={theme} setTheme={setTheme} />
             )}
         </ThemeProvider>
     );

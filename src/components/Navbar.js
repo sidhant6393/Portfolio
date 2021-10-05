@@ -5,34 +5,59 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { darkTheme, lightTheme } from "../styles/theme";
+import { breakPoint } from "../utils/breakPoints";
 
 const NavBarContainer = styled.div`
     height: 80px;
-    border: 1px solid black;
 
     .nav-content {
         display: flex;
         align-items: center;
-        border: 1px solid yellow;
+        justify-content: space-between;
         height: 100%;
-        width: 1440px;
+        max-width: 1440px;
+        margin: auto;
     }
+
+    .logo {
+        margin-left: 3%;
+    }
+
     .nav-toggle-container {
-        border: 1px solid pink;
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
+        width: 55%;
+    }
+
+    .links {
+        width: fit-content;
+        color: ${(prpos) => prpos.theme.primaryText};
+
+        > span:nth-child(1) {
+            margin-left: 2em;
+        }
+
+        > span {
+            font-size: 1.1em;
+            font-style: normal;
+            line-height: 37px;
+            margin: 1em;
+            letter-spacing: 0.05em;
+        }
     }
 
     .switch-toggle {
         height: 96px;
         width: 200px;
-        border: 4px solid #55af96;
+        border: 2px solid ${(props) => props.theme.border};
         border-radius: 96px;
         position: relative;
         cursor: pointer;
-        transform: scale(0.5);
+        transform: scale(0.4);
+        margin-right: -5%;
+        background: ${(props) => props.theme.toggleBg};
     }
 
     #sun {
@@ -40,21 +65,47 @@ const NavBarContainer = styled.div`
         border-radius: 50%;
         position: absolute;
         left: -1px;
-        top: -4px;
+        top: -2px;
     }
 
     #moon {
         transform: scale(1);
         border-radius: 50%;
         position: absolute;
-        left: 0;
-        top: -5px;
+        left: 1px;
+        top: -4px;
         opacity: 0;
+    }
+
+    @media (max-width: ${breakPoint.tablet}) {
+        .switch-toggle {
+            /* transform: translateX(1em); */
+        }
+
+        .nav-toggle-container {
+            width: fit-content;
+        }
+
+        .links {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: space-between;
+            justify-content: center;
+            background: ${(props) => props.theme.imageFilter};
+        }
+        .links > span {
+            font-size: 1em;
+        }
+        .logo {
+            margin-left: 50px;
+        }
     }
 `;
 
-export const Navbar = () => {
-    const [theme, setTheme] = useState(lightTheme);
+export const Navbar = ({ theme, setTheme }) => {
     const [t1, setT1] = useState(gsap.timeline());
     const sunRef = useRef(null);
     const moonRef = useRef(null);
@@ -63,7 +114,7 @@ export const Navbar = () => {
         setT1(
             t1
                 .to(sunRef.current, {
-                    duration: 0.5,
+                    duration: 0.3,
                     right: 0,
                     left: "unset",
                     rotate: "180deg",
@@ -73,14 +124,14 @@ export const Navbar = () => {
                 .to(
                     moonRef.current,
                     {
-                        duration: 0.5,
+                        duration: 0.3,
                         right: 0,
                         left: "unset",
                         rotate: "180deg",
                         opacity: 1,
                         ease: "none",
                     },
-                    "-=0.5"
+                    "-=0.3"
                 )
         );
     }, [t1]);
@@ -96,14 +147,24 @@ export const Navbar = () => {
         <NavBarContainer>
             <div className="nav-content">
                 <div className="logo">
-                    <img src={logolight} alt={logolight} />
+                    {theme.name === "light" ? (
+                        <img src={logolight} alt={logolight} />
+                    ) : (
+                        <img src={logoDark} alt={logoDark} />
+                    )}
                 </div>
                 <div className="nav-toggle-container">
                     <div className="links">
                         <span>
                             <Link to="#about-me">About Me</Link>
+                        </span>
+                        <span>
                             <Link to="#projects">Projects</Link>
+                        </span>
+                        <span>
                             <Link to="#blogs">Blogs</Link>
+                        </span>
+                        <span>
                             <Link to="#contact">Contact</Link>
                         </span>
                     </div>

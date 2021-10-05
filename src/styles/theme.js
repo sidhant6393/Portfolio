@@ -7,7 +7,8 @@ export const lightTheme = {
     imageFilter: "rgba(131, 229, 171, 0.28)",
     buttonBg: "#F7F7F7",
     primaryText: "#262626",
-    border: "262626",
+    border: "#d9d9d9",
+    toggleBg: "#ffffff",
 };
 
 export const darkTheme = {
@@ -20,4 +21,5 @@ export const darkTheme = {
     buttonBg: "#262626",
     primaryText: "#D9D9D9",
     border: "#D9D9D9",
+    toggleBg: "#d1d1d1",
 };

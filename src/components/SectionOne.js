@@ -5,7 +5,8 @@ import { breakPoint } from "../utils/breakPoints";
 const SectionContainer = styled.div`
     height: 100vh;
     position: relative;
-    border: 50px solid "yellow";
+    background: ${(props) => props.theme.bg};
+    z-index: 1;
 
     .fixed-box {
         position: absolute;
@@ -13,7 +14,7 @@ const SectionContainer = styled.div`
         width: 67%;
         top: 0;
         right: 0;
-        z-index: -1;
+        z-index: -2;
         background: ${(props) => props.theme.primary};
         display: block;
     }
@@ -25,10 +26,10 @@ const SectionContainer = styled.div`
     }
 `;
 
-export const SectionOne = () => {
+export const SectionOne = ({ theme, setTheme }) => {
     return (
         <SectionContainer>
-            <Navbar />
+            <Navbar theme={theme} setTheme={setTheme} />
             <div className="fixed-box"></div>
         </SectionContainer>
     );
