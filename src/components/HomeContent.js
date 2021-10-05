@@ -1,3 +1,5 @@
+import gsap from "gsap";
+import { useEffect, useState } from "react";
 import styled from "styled-components"
 import { breakPoint } from "../utils/breakPoints";
 
@@ -14,6 +16,7 @@ const HomeContainer = styled.div`
     }
     .hand-wave {
         font-size: 2em;
+        display: inline-block;
     }
     .name {
         font-size: 3.125em;
@@ -49,6 +52,14 @@ const Resume = styled.button`
 `
 
 export const HomeContent = () => {
+
+    useEffect(() => {
+        gsap.set(".hand-wave", { transformOrigin: "bottom" })
+
+        gsap.to(".hand-wave", { rotate: -20, repeat: -1, yoyo: true, ease: "none", duration: 1 })
+
+
+    }, [])
     return (
         <HomeContainer>
             <div>
