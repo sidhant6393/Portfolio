@@ -45,6 +45,28 @@ const NavBarContainer = styled.div`
             line-height: 37px;
             margin: 1em;
             letter-spacing: 0.05em;
+            font-weight: bold;
+            position: relative;
+
+            > a {
+                font-family: "Yusei Magic", sans-serif;
+            }
+        }
+
+        > span::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #000;
+            bottom: -6px;
+            left: 0;
+            transition: width 0.2s ease-out;
+            background: ${(prpos) => prpos.theme.primaryText};
+        }
+
+        > span:hover::after {
+            width: 100%;
         }
     }
 
