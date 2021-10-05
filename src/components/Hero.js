@@ -24,13 +24,15 @@ export const Hero = () => {
 
 
     useEffect(() => {
-        gsap.set(["#terminal"], { scale: 0, transformOrigin: "right bottom" });
+        gsap.set(["#terminal"], { scale: 0, transformOrigin: "bottom center" });
         setT2(t2
-            .to("#terminal", { scale: 1, duration: 1 })
+            .from(".line", { scaleX: 0, stagger: 0.2 })
+            .to("#terminal", { scale: 1, ease: "back.out(1.5)", duration: 0.3 })
+            .to("#cursor", { opacity: 0, repeat: -1, yoyo: true, ease: "Power1.easeIn", delay: 0.2 }, "<1")
         )
     }, [])
 
-    // .to("#cursor", { opacity: 0, repeat: -1, yoyo: true, ease: "Power1.easeIn" })
+
 
     return (
         <HeroContainer>
@@ -97,79 +99,79 @@ export const Hero = () => {
                         ></path>
                         <g id="code">
                             <path
-                                id="line"
+                                className="line"
                                 fill="#A3848D"
                                 d="M339.17 32.246H221.897v5.079H339.17v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_2"
+                                className="line"
                                 fill="#A58492"
                                 d="M346.773 43.148H221.898v5.079h124.875v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_3"
+                                className="line"
                                 fill="#A284A3"
                                 d="M323.669 54.15H221.898v5.079h101.771v-5.08z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_4"
+                                className="line"
                                 fill="#9084A0"
                                 d="M308.96 65.25h-87.062v5.08h87.062v-5.08z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_5"
+                                className="line"
                                 fill="#83859E"
                                 d="M294.086 76.136h-72.188v5.08h72.188v-5.08z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_6"
+                                className="line"
                                 fill="#83929B"
                                 d="M342.675 87.22H221.898v5.08h120.777v-5.08z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_7"
+                                className="line"
                                 fill="#829995"
                                 d="M363.564 98.57H221.898v5.078h141.666v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_8"
+                                className="line"
                                 fill="#84998B"
                                 d="M340.129 109.223H221.898v5.079h118.231v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_9"
+                                className="line"
                                 fill="#899985"
                                 d="M333.486 120.225H221.898v5.079h111.588v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_10"
+                                className="line"
                                 fill="#979987"
                                 d="M274.948 131.127h-53.05v5.079h53.05v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_11"
+                                className="line"
                                 fill="#999488"
                                 d="M376.389 142.129H221.898v5.079h154.491v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_12"
+                                className="line"
                                 fill="#998E8A"
                                 d="M333.486 153.13H221.898v5.079h111.588v-5.079z"
                                 opacity="0.39"
                             ></path>
                             <path
-                                id="line_13"
+                                className="line"
                                 fill="#998C8C"
                                 d="M304.382 164.131H221.7v5.079h82.682v-5.079z"
                                 opacity="0.39"
@@ -409,7 +411,7 @@ export const Hero = () => {
                     </g>
                 </g>
             </svg>
-            );
+
 
 
         </HeroContainer>

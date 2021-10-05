@@ -8,7 +8,9 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Jaldi', sans-serif;
+        /* font-family: 'Jaldi', sans-serif; */
+        font-family: "Yusei Magic", sans-serif;
+
         
         /* Disable text Selection */
         -webkit-touch-callout: none; /* iOS Safari */
@@ -27,6 +29,13 @@ export const GlobalStyles = createGlobalStyle`
     a{
         text-decoration: none;
         color: inherit;
+    }
+    button{
+        background: none;
+        border: none;
+        font-family: 'Jaldi', sans-serif;
+        cursor: pointer;
+
     }
 
 `;

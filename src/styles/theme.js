@@ -7,7 +7,7 @@ export const lightTheme = {
     imageFilter: "rgba(131, 229, 171, 0.28)",
     buttonBg: "#F7F7F7",
     primaryText: "#262626",
-    border: "#d9d9d9",
+    border: "#262626",
     toggleBg: "#ffffff",
 };
 
