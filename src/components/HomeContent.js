@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { useEffect, useState } from "react";
-import styled from "styled-components"
+import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
 
 const HomeContainer = styled.div`
@@ -27,6 +27,7 @@ const HomeContainer = styled.div`
         letter-spacing: 1px;
         margin-top: 10px;
     }
+
     @media (max-width: ${breakPoint.tablet}) {
         & {
             transform: scale(0.8);
@@ -43,31 +44,43 @@ const HomeContainer = styled.div`
 const Resume = styled.button`
     height: 50px;
     width: 160px;
-    border: 3px solid ${props => props.theme.border};
+    border: 3px solid ${(props) => props.theme.border};
     font-size: 1.25em;
     font-weight: bold;
     margin-top: 25px;
-    background: ${props => props.theme.buttonBg};
-    color:${props => props.theme.primaryText};
-`
+    background: ${(props) => props.theme.buttonBg};
+    color: ${(props) => props.theme.primaryText};
+    display: grid;
+    align-items: center;
+    justify-content: center;
+`;
 
 export const HomeContent = () => {
-
     useEffect(() => {
-        gsap.set(".hand-wave", { transformOrigin: "bottom" })
+        gsap.set(".hand-wave", { transformOrigin: "bottom" });
 
-        gsap.to(".hand-wave", { rotate: -20, repeat: -1, yoyo: true, ease: "none", duration: 1 })
-
-
-    }, [])
+        gsap.to(".hand-wave", {
+            rotate: -20,
+            repeat: -1,
+            yoyo: true,
+            ease: "none",
+            duration: 1,
+        });
+    }, []);
     return (
         <HomeContainer>
             <div>
-                <div className="hello"><span className="hand-wave"> 👋🏻 </span> Hi, my name is</div>
+                <div className="hello">
+                    <span className="hand-wave"> 👋🏻 </span> Hi, my name is
+                </div>
                 <h1 className="name">Santosh Mane</h1>
-                <p className="about-one-line">I like to build interactive things for web</p>
-                <Resume className="resume">Resume</Resume>
+                <p className="about-one-line">
+                    I like to build interactive things for web
+                </p>
+                <Resume className="resume">
+                    <a href="./resume.pdf">Resume</a>
+                </Resume>
             </div>
         </HomeContainer>
-    )
-}
+    );
+};
