@@ -201,7 +201,7 @@ export const Navbar = ({ theme, setTheme }) => {
                     <div
                         onClick={handleSwitch}
                         id="switch"
-                        class="switch switch-toggle"
+                        className="switch switch-toggle"
                     >
                         <svg
                             ref={sunRef}
@@ -241,12 +241,12 @@ export const Navbar = ({ theme, setTheme }) => {
                                     gradientUnits="userSpaceOnUse"
                                     gradientTransform="matrix(40 0 0 40 47 47)"
                                 >
-                                    <stop stop-color="#A7A6B5" />
-                                    <stop offset=".629" stop-color="#7F7E8A" />
-                                    <stop offset=".728" stop-color="#7A7985" />
-                                    <stop offset=".85" stop-color="#6A6977" />
-                                    <stop offset=".986" stop-color="#515061" />
-                                    <stop offset=".999" stop-color="#4E4D5E" />
+                                    <stop stopColor="#A7A6B5" />
+                                    <stop offset=".629" stopColor="#7F7E8A" />
+                                    <stop offset=".728" stopColor="#7A7985" />
+                                    <stop offset=".85" stopColor="#6A6977" />
+                                    <stop offset=".986" stopColor="#515061" />
+                                    <stop offset=".999" stopColor="#4E4D5E" />
                                 </radialGradient>
                                 <radialGradient
                                     id="paint1_radial"
@@ -256,12 +256,12 @@ export const Navbar = ({ theme, setTheme }) => {
                                     gradientUnits="userSpaceOnUse"
                                     gradientTransform="matrix(39.5794 0 0 40.8072 47.231 47.653)"
                                 >
-                                    <stop offset=".001" stop-color="#9493A1" />
-                                    <stop offset=".628" stop-color="#74737D" />
-                                    <stop offset=".716" stop-color="#6F6E78" />
-                                    <stop offset=".825" stop-color="#5F5E69" />
-                                    <stop offset=".946" stop-color="#464550" />
-                                    <stop offset="1" stop-color="#383742" />
+                                    <stop offset=".001" stopColor="#9493A1" />
+                                    <stop offset=".628" stopColor="#74737D" />
+                                    <stop offset=".716" stopColor="#6F6E78" />
+                                    <stop offset=".825" stopColor="#5F5E69" />
+                                    <stop offset=".946" stopColor="#464550" />
+                                    <stop offset="1" stopColor="#383742" />
                                 </radialGradient>
                             </defs>
                         </svg>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Navbar } from "./Navbar";
 import { breakPoint } from "../utils/breakPoints";
+import { Hero } from "./Hero";
 
 const SectionContainer = styled.div`
     height: 100vh;
@@ -31,6 +32,7 @@ export const SectionOne = ({ theme, setTheme }) => {
         <SectionContainer>
             <Navbar theme={theme} setTheme={setTheme} />
             <div className="fixed-box"></div>
+            <Hero />
         </SectionContainer>
     );
 };
