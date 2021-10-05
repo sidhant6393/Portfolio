@@ -29,11 +29,13 @@ const NavBarContainer = styled.div`
         justify-content: space-between;
         height: 100%;
         width: 55%;
+        min-width: 600px;
     }
 
     .links {
         width: fit-content;
         color: ${(prpos) => prpos.theme.primaryText};
+        min-width: 430px;
 
         > span:nth-child(1) {
             margin-left: 2em;
@@ -80,6 +82,7 @@ const NavBarContainer = styled.div`
         transform: scale(0.4);
         margin-right: -5%;
         background: ${(props) => props.theme.toggleBg};
+
     }
 
     #sun {
@@ -123,6 +126,11 @@ const NavBarContainer = styled.div`
         }
         .logo {
             margin-left: 50px;
+        }
+        .nav-toggle-container{
+            justify-content: flex-end;
+            min-width: 200px;
+
         }
     }
 `;
