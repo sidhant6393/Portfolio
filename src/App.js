@@ -4,6 +4,8 @@ import animationData from "./utils/preloader-animation-data.json";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styles/theme";
 
+import { SectionOne } from "./components/SectionOne"; // temp
+
 const lottieOption = {
     loop: false,
     autoplay: true,
@@ -15,12 +17,12 @@ const lottieOption = {
 
 function App() {
     const [loding, setLoding] = useState(true);
-    const [theme, setTheme] = useState(darkTheme);
+    const [theme, setTheme] = useState(lightTheme);
 
     useEffect(() => {
         setTimeout(() => {
             setLoding(false);
-        }, 6000);
+        }, 5000);
     }, []);
 
     return (
@@ -38,7 +40,7 @@ function App() {
                     <Lottie options={lottieOption} height={300} width={300} />
                 </div>
             ) : (
-                <h1> Hi, All</h1>
+                <SectionOne theme={theme} setTheme={setTheme} />
             )}
         </ThemeProvider>
     );
