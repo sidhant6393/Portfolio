@@ -1,4 +1,5 @@
 export const lightTheme = {
+    name: "light",
     logo: "#55AF97",
     primary: "#67D2B4",
     importentText: "#4EB785",
@@ -10,6 +11,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
+    name: "dark",
     logo: "#9494D6",
     primary: "#4C4C78",
     importentText: "#AFAFFF",

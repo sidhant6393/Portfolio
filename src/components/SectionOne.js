@@ -17,6 +17,7 @@ const SectionContainer = styled.div`
         background: ${(props) => props.theme.primary};
         display: block;
     }
+
     @media (max-width: ${breakPoint.tablet}) {
         .fixed-box {
             display: none;
