@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { darkTheme, lightTheme } from "../styles/theme";
 import { breakPoint } from "../utils/breakPoints";
+import { HashLink } from "react-router-hash-link";
+import { scrollWithOffset } from "../utils/scrollWithOffset";
 
 const NavBarContainer = styled.div`
     height: 80px;
@@ -186,7 +188,14 @@ export const Navbar = ({ theme, setTheme }) => {
                 <div className="nav-toggle-container">
                     <div className="links">
                         <span>
-                            <Link to="#about-me">About Me</Link>
+                            <HashLink
+                                to="/#about-me"
+                                activeClassName="selected"
+                                activeStyle={{ color: 'red' }}
+                                scroll={el => scrollWithOffset(el)}
+                            // etc...
+                            >About Me</HashLink>
+                            {/* <Link to="#about-me">About Me</Link> */}
                         </span>
                         <span>
                             <Link to="#projects">Projects</Link>
@@ -268,6 +277,7 @@ export const Navbar = ({ theme, setTheme }) => {
                     </div>
                 </div>
             </div>
-        </NavBarContainer>
+        </NavBarContainer >
     );
 };
+

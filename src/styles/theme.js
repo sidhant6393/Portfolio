@@ -4,7 +4,7 @@ export const lightTheme = {
     primary: "#67D2B4",
     importentText: "#4EB785",
     bg: "#FFFFFF",
-    imageFilter: "rgba(131, 229, 171, 0.28)",
+    imageFilter: "rgba(131, 229, 171, 1)",
     buttonBg: "#F7F7F7",
     primaryText: "#262626",
     border: "#262626",
