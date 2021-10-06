@@ -53,6 +53,11 @@ const Resume = styled.button`
     display: grid;
     align-items: center;
     justify-content: center;
+
+    > a{
+        height: fit-content;
+        transform: translateY(-3px)
+    }
 `;
 
 export const HomeContent = () => {
