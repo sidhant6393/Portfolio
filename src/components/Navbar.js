@@ -84,7 +84,6 @@ const NavBarContainer = styled.div`
         transform: scale(0.4);
         margin-right: -5%;
         background: ${(props) => props.theme.toggleBg};
-
     }
 
     #sun {
@@ -129,10 +128,9 @@ const NavBarContainer = styled.div`
         .logo {
             margin-left: 50px;
         }
-        .nav-toggle-container{
+        .nav-toggle-container {
             justify-content: flex-end;
             min-width: 200px;
-
         }
     }
 `;
@@ -191,20 +189,37 @@ export const Navbar = ({ theme, setTheme }) => {
                             <HashLink
                                 to="/#about-me"
                                 activeClassName="selected"
-                                activeStyle={{ color: 'red' }}
-                                scroll={el => scrollWithOffset(el)}
-                            // etc...
-                            >About Me</HashLink>
-                            {/* <Link to="#about-me">About Me</Link> */}
+                                scroll={(el) => scrollWithOffset(el)}
+                            >
+                                About Me
+                            </HashLink>
                         </span>
                         <span>
-                            <Link to="#projects">Projects</Link>
+                            <HashLink
+                                to="/#projects"
+                                activeClassName="selected"
+                                scroll={(el) => scrollWithOffset(el)}
+                            >
+                                Projects
+                            </HashLink>
                         </span>
                         <span>
-                            <Link to="#blogs">Blogs</Link>
+                            <HashLink
+                                to="/#blogs"
+                                activeClassName="selected"
+                                scroll={(el) => scrollWithOffset(el)}
+                            >
+                                Blogs
+                            </HashLink>
                         </span>
                         <span>
-                            <Link to="#contact">Contact</Link>
+                            <HashLink
+                                to="/#contact"
+                                activeClassName="selected"
+                                scroll={(el) => scrollWithOffset(el)}
+                            >
+                                Contact
+                            </HashLink>
                         </span>
                     </div>
                     <div
@@ -277,7 +292,6 @@ export const Navbar = ({ theme, setTheme }) => {
                     </div>
                 </div>
             </div>
-        </NavBarContainer >
+        </NavBarContainer>
     );
 };
-
