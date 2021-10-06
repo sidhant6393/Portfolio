@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { projectsDate } from "../../utils/data";
 
 const Projects = styled.div`
     position: relative;
@@ -11,6 +10,7 @@ const Projects = styled.div`
     grid-template: 1fr repeat(2, 2fr) / repeat(12, 1fr);
     align-items: center;
     margin-top: 5%;
+    margin-bottom: 5%;
     color: ${(props) => props.theme.primaryText};
 
     .img-container {
@@ -86,10 +86,9 @@ const Projects = styled.div`
     }
 `;
 
-const { title, projectImg, about, tech, githubLink, deploymentLink } =
-    projectsDate[0];
-
-export const ProjectComponent = () => {
+export const ProjectComponent = ({
+    el: { title, projectImg, about, tech, githubLink, deploymentLink },
+}) => {
     return (
         <Projects>
             <div class="img-container">
@@ -105,10 +104,8 @@ export const ProjectComponent = () => {
             <div className="project-discription">{about}</div>
             <div className="projects-others">
                 <div className="tech-stacks">
-                    {tech.map((el, i) => (
-                        <span className="tech-name" key={i}>
-                            {el}
-                        </span>
+                    {tech.map((el) => (
+                        <span className="tech-name">{el}</span>
                     ))}
                 </div>
                 <div className="projects-links">
