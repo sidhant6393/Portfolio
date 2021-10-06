@@ -60,7 +60,7 @@ const AboutContainer = styled.section`
 
         span {
             flex-shrink: 1;
-            font-size: 0.8em;
+            font-size: 1em;
             /* border: 1px solid #000; */
         }
     }
