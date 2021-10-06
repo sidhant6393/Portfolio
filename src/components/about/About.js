@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { languages } from "../../utils/data";
+import myImage from "../../assets/me.png";
+import { breakPoint } from "../../utils/breakPoints";
 
 // const Hr = styled.div`
 //     width: ${(props) => props.width};
@@ -13,11 +15,40 @@ import { languages } from "../../utils/data";
 
 const AboutContainer = styled.section`
     height: 100vh;
-    /* border: 1px solid #000; */
+    border: 1px solid transparent;
+    background: ${(props) => props.theme.bg};
 
     & > .space {
         margin: 8% 12%;
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
+        position: relative;
+
+        & > .my-photo {
+            position: absolute;
+            /* border: 1px solid #000; */
+
+            top: 50%;
+            right: 0;
+            width: 25%;
+            transform: translateY(-40%);
+            background: ${(props) => props.theme.imageFilter};
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+                box-shadow: 5px 5px 0 4px ${(props) => props.theme.primaryText};
+                width: 100%;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+            }
+
+            > img:hover {
+                opacity: 1;
+                box-shadow: 2px 2px 0 0px ${(props) => props.theme.primaryText};
+                transform: translate(-1%, -1%);
+            }
+        }
     }
 
     .about-me {
@@ -39,6 +70,7 @@ const AboutContainer = styled.section`
         letter-spacing: 1px;
         font-size: 1.1em;
         color: ${(props) => props.theme.primaryText};
+        position: relative;
 
         .dis1 {
             margin-top: 5%;
@@ -74,13 +106,22 @@ const AboutContainer = styled.section`
             color: ${(props) => props.theme.importentText};
         }
     }
+
+    @media (max-width: ${breakPoint.tablet}) {
+        /* background: red; */
+        .about-me {
+            font-size: 1em;
+        }
+        .dis-container {
+        }
+    }
 `;
 
 export const About = () => {
     return (
-        <AboutContainer>
+        <AboutContainer id="about-me">
             <div className="space">
-                <h2 id="about-me" className="about-me">
+                <h2 className="about-me">
                     ABOUT ME
                     {/*<Hr width={"content-fit"} /> */}
                 </h2>
@@ -107,9 +148,9 @@ export const About = () => {
                             <span>{languages}</span>
                         ))}
                     </p>
-                    <div className="my-photo">
-                        <img src="" alt="" />
-                    </div>
+                </div>
+                <div className="my-photo">
+                    <img src={myImage} alt={myImage} />
                 </div>
             </div>
         </AboutContainer>
