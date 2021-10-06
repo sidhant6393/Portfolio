@@ -11,7 +11,7 @@ export const languages = [
 
 export const projectsDate = [
     {
-        name: "Groww Clone",
+        title: "Groww Clone",
         projectImg: projectImage1,
         about: "It’s an online investment platform that allows investors to invest in mutual funds and stocks.",
         tech: [
@@ -26,7 +26,7 @@ export const projectsDate = [
         deploymentLink: "https://growww-app.herokuapp.com/",
     },
     {
-        name: "Groww Clone",
+        title: "Groww Clone",
         projectImg: projectImage1,
         about: "It’s an online investment platform that allows investors to invest in mutual funds and stocks.",
         tech: [
@@ -41,7 +41,7 @@ export const projectsDate = [
         deploymentLink: "https://growww-app.herokuapp.com/",
     },
     {
-        name: "Groww Clone",
+        title: "Groww Clone",
         projectImg: projectImage1,
         about: "It’s an online investment platform that allows investors to invest in mutual funds and stocks.",
         tech: [

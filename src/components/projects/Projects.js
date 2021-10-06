@@ -6,6 +6,7 @@ const ProjectContainer = styled.section`
     height: 100vh;
     background: ${(props) => props.theme.primary};
     border: 1px solid #000;
+    color: ${(props) => props.theme.primaryText};
 
     .projects {
         font-size: 1.5em;
