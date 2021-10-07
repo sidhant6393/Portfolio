@@ -210,6 +210,7 @@ export const HomeContent = () => {
                     I like to build{" "}
                     <span
                         onMouseOver={handlePhysicsAnimatin}
+                        onClick={handlePhysicsAnimatin}
                         className="interactive"
                     >
                         {" "}
