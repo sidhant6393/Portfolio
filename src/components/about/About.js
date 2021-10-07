@@ -5,14 +5,6 @@ import { languages } from "../../utils/data";
 import myImage from "../../assets/me.png";
 import { breakPoint } from "../../utils/breakPoints";
 
-// const Hr = styled.div`
-//     width: ${(props) => props.width};
-//     display: inline-block;
-//     height: 4px;
-//     border-bottom: 1px solid #000;
-//     flex-shrink: 3;
-// `;
-
 const AboutContainer = styled.section`
     height: 100vh;
     border: 1px solid transparent;

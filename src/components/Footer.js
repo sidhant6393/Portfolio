@@ -12,7 +12,6 @@ const Contacts = styled.footer`
     color: ${(props) => props.theme.primaryText};
 
     h1 {
-        /* text-align: center; */
         margin-bottom: 1%;
         font-size: 1.1em;
     }
@@ -20,7 +19,6 @@ const Contacts = styled.footer`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* border: 1px solid #000; */
         width: 20%;
 
         > span {
@@ -45,7 +43,6 @@ const Contacts = styled.footer`
 export const Footer = () => {
     return (
         <Contacts id="#contact">
-            {/* <img src="" alt="" /> */}
             <h1>Living, learning, & leveling up one day at a time.</h1>
             <div className="social-links">
                 <span>

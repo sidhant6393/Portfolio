@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
 import Physics2DPlugin from "gsap/Physics2DPlugin";
-import GSDevTools from "gsap/GSDevTools";
 
 const HomeContainer = styled.div`
     color: ${(props) => props.theme.primaryText};

@@ -5,7 +5,6 @@ import { projectsDate } from "../../utils/data";
 import { breakPoint } from "../../utils/breakPoints";
 
 const ProjectContainer = styled.section`
-    /* height: 100vh; */
     background: ${(props) => props.theme.primary};
     border: 1px solid transparent;
     color: ${(props) => props.theme.primaryText};

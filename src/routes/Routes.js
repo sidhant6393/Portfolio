@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "../utils/preloader-animation-data.json";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../styles/theme";
+import { lightTheme } from "../styles/theme";
 import { About } from "../components/about/About";
 import { Projects } from "../components/projects/Projects";
 import { Footer } from "../components/Footer";

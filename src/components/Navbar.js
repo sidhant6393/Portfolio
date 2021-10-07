@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import logolight from "../assets/logo-light.svg";
 import logoDark from "../assets/logo-dark.svg";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { darkTheme, lightTheme } from "../styles/theme";
