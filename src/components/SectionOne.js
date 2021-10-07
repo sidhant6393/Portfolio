@@ -3,9 +3,8 @@ import { Navbar } from "./Navbar";
 import { breakPoint } from "../utils/breakPoints";
 import { Hero } from "./Hero";
 import { HomeContent } from "./HomeContent";
-import { useEffect, useState } from "react/cjs/react.development";
-import gsap from "gsap/all";
-import { useRef } from "react";
+import gsap from "gsap";
+import { useRef, useEffect, useState } from "react";
 
 const SectionContainer = styled.div`
     height: 100vh;
@@ -54,6 +53,7 @@ export const SectionOne = ({ theme, setTheme }) => {
                 )
                 .from(".home-content", { opacity: 0 })
         );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

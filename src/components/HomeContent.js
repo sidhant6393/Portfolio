@@ -197,7 +197,7 @@ export const HomeContent = () => {
         } else {
             symbolAnimation.restart();
         }
-        console.log("over");
+        // console.log("over");
     };
     return (
         <HomeContainer>
