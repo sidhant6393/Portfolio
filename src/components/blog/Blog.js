@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { BlogCard } from "./BlogCard";
 import Draggable from "gsap/Draggable";
 import gsap from "gsap";
-import { useState } from "react/cjs/react.development";
 import { blogsData } from "../../utils/data";
 import { breakPoint } from "../../utils/breakPoints";
 
