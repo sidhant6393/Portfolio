@@ -18,7 +18,7 @@ export const darkTheme = {
     primary: "#4C4C78",
     importentText: "#AFAFFF",
     bg: "#282828",
-    imageFilter: "rgba(148, 148, 214, 0.28)",
+    imageFilter: "rgba(148, 148, 214, 1)",
     buttonBg: "#262626",
     primaryText: "#D9D9D9",
     border: "#D9D9D9",

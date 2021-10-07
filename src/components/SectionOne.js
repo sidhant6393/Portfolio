@@ -3,6 +3,9 @@ import { Navbar } from "./Navbar";
 import { breakPoint } from "../utils/breakPoints";
 import { Hero } from "./Hero";
 import { HomeContent } from "./HomeContent";
+import { useEffect, useState } from "react/cjs/react.development";
+import gsap from "gsap/all";
+import { useRef } from "react";
 
 const SectionContainer = styled.div`
     height: 100vh;
@@ -29,12 +32,42 @@ const SectionContainer = styled.div`
 `;
 
 export const SectionOne = ({ theme, setTheme }) => {
+    const [lodingTimeline, setLodingTimeline] = useState(gsap.timeline());
+    const refNav = useRef(null);
+    useEffect(() => {
+        // gsap.set(".section-nav", { opacity: 0 });
+        setLodingTimeline(
+            lodingTimeline
+                .from(".fixed-box", {
+                    duration: 3,
+                    xPercent: 100,
+                    ease: "back.out(0.5)",
+                })
+                .from(
+                    ".section-nav",
+                    {
+                        duration: 2,
+                        // yPercent: -100,
+                        opacity: 0,
+                    },
+                    "-=2"
+                )
+                .from(".home-content", { opacity: 0 })
+        );
+    }, []);
+
     return (
         <SectionContainer>
-            <Navbar theme={theme} setTheme={setTheme} />
+            <div className="section-nav">
+                <Navbar theme={theme} setTheme={setTheme} />
+            </div>
             <div className="fixed-box"></div>
-            <Hero />
-            <HomeContent />
+            <div className="hero">
+                <Hero ref={refNav} />
+            </div>
+            <div className="home-content">
+                <HomeContent />
+            </div>
         </SectionContainer>
     );
 };
