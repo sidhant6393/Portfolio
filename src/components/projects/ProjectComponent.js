@@ -6,7 +6,7 @@ const Projects = styled.div`
     .projects-con {
         position: relative;
         margin: auto;
-        width: 75%;
+        width: 76%;
         height: 300px;
         display: grid;
         grid-template: 1fr repeat(2, 3fr) / repeat(12, 1fr);
@@ -22,6 +22,15 @@ const Projects = styled.div`
 
         & > img {
             border-radius: 8px;
+            filter: blur(1px);
+            opacity: 0.7;
+            transition: all 0.5s ease;
+            box-shadow: 0 0 20px -2px #000;
+        }
+        &:hover > img {
+            filter: blur(0px);
+            opacity: 1;
+            box-shadow: 0 0 20px -10px #000;
         }
     }
 
@@ -42,7 +51,7 @@ const Projects = styled.div`
         height: 100%;
         position: relative;
         left: -16%;
-        font-size: 1.1em;
+        font-size: 0.9em;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -50,6 +59,7 @@ const Projects = styled.div`
         padding-right: 2%;
         text-align: end;
         font-weight: lighter;
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
     }
     .projects-others {
         grid-column: 7 / span 6;
@@ -90,7 +100,11 @@ const Projects = styled.div`
 
     @media (max-width: ${breakPoint.tablet}) {
         margin-bottom: 100px;
+        transition: all 0.5s ease;
 
+        &:hover > .projects-con > .img-container img {
+            box-shadow: 0 0 20px -10px #000;
+        }
         .img-container {
             position: absolute;
             grid-column: 1 / span 13;
@@ -98,6 +112,10 @@ const Projects = styled.div`
             z-index: 0;
 
             & img {
+                filter: blur(1px);
+                opacity: 0.5;
+            }
+            &:hover > img {
                 filter: blur(1px);
                 opacity: 0.5;
             }
@@ -120,6 +138,7 @@ const Projects = styled.div`
             justify-content: center;
             text-align: center;
             background: transparent;
+            box-shadow: none;
         }
         .projects-others {
             z-index: 0;
