@@ -26,6 +26,11 @@ const HomeContainer = styled.div`
         font-size: 1.1em;
         letter-spacing: 1px;
         margin-top: 10px;
+
+        .interactive {
+            color: ${(props) => props.theme.oppositeTheam};
+            cursor: pointer;
+        }
     }
 
     @media (max-width: ${breakPoint.tablet}) {
@@ -54,9 +59,9 @@ const Resume = styled.button`
     align-items: center;
     justify-content: center;
 
-    > a{
+    > a {
         height: fit-content;
-        transform: translateY(-3px)
+        transform: translateY(-3px);
     }
 `;
 
@@ -80,7 +85,9 @@ export const HomeContent = () => {
                 </div>
                 <h1 className="name">Santosh Mane</h1>
                 <p className="about-one-line">
-                    I like to build interactive things for web
+                    I like to build{" "}
+                    <span className="interactive"> Interactive</span> things for
+                    web
                 </p>
                 <Resume className="resume">
                     <a href="./resume.pdf">Resume</a>

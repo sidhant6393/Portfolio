@@ -9,6 +9,7 @@ export const lightTheme = {
     primaryText: "#262626",
     border: "#262626",
     toggleBg: "#ffffff",
+    oppositeTheam: "#303091",
 };
 
 export const darkTheme = {
@@ -22,4 +23,5 @@ export const darkTheme = {
     primaryText: "#D9D9D9",
     border: "#D9D9D9",
     toggleBg: "#d1d1d1",
+    oppositeTheam: "#4EB785",
 };
