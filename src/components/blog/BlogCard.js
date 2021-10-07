@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { breakPoint } from "../../utils/breakPoints";
 
 const Card = styled.div`
     border: 2px solid ${(props) => props.theme.border};
@@ -7,11 +8,13 @@ const Card = styled.div`
     width: 22em;
     border-radius: 8px;
     margin: auto;
-    position: relative;
+    margin-left: ${(props) => props.value * 3 + 5}px;
+    margin-top: ${(props) => props.value * 3 + 5}px;
+    position: absolute;
     color: ${(props) => props.theme.primaryText};
     background: ${(props) => props.theme.buttonBg};
     cursor: grab;
-    margin-left: 5px;
+    /* margin-left: 5px; */
 
     .card {
         width: 100%;
@@ -34,6 +37,7 @@ const Card = styled.div`
     }
     .card-body {
         margin: 0.5em;
+        font-weight: lighter;
     }
     .blog-title {
         text-align: center;
@@ -54,11 +58,19 @@ const Card = styled.div`
         right: 0.5em;
         color: ${(props) => props.theme.importentText};
     }
+
+    @media (max-width: ${breakPoint.tablet}) {
+        & {
+            transform-origin: 0 0;
+            transform: matrix(0.6, 0, 0, 0.6, 0, 0);
+        }
+    }
 `;
 
-export const BlogCard = () => {
+export const BlogCard = ({ blog, value }) => {
+    const { blogTitle, blogDiscription, blogLink } = blog;
     return (
-        <Card>
+        <Card value={value}>
             <div className="card">
                 <div className="card-head">
                     <div>
@@ -69,21 +81,12 @@ export const BlogCard = () => {
                 </div>
                 <div className="card-body">
                     <div className="blog-title">
-                        <h3>Lorem ipsum dolor sit.</h3>
+                        <h3>{blogTitle}</h3>
                     </div>
-                    <div className="blog-dis">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nostrum, atque. Voluptatem necessitatibus quisquam
-                        cupiditate doloribus fugiat quasi facilis veritatis
-                        cumque?
-                    </div>
+                    <div className="blog-dis">{blogDiscription}</div>
                 </div>
                 <div className="card-bottom">
-                    <a
-                        href="https://santoshcodes.hashnode.dev/what-is-the-difference-between-web-development-and-web-design"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href={blogLink} rel="noreferrer" target="_blank">
                         Read➤
                     </a>
                 </div>
