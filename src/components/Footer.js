@@ -42,7 +42,7 @@ const Contacts = styled.footer`
 
 export const Footer = () => {
     return (
-        <Contacts id="#contact">
+        <Contacts id="contact">
             <h1>Living, learning, & leveling up one day at a time.</h1>
             <div className="social-links">
                 <span>

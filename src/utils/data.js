@@ -10,7 +10,7 @@ export const languages = [
     "gsap",
 ];
 
-export const projectsDate = [
+export const projectsData = [
     {
         title: "Groww Clone",
         projectImg: projectImage1,
@@ -48,5 +48,29 @@ export const projectsDate = [
         ],
         githubLink: "https://github.com/santoshmcode/groww-clone",
         deploymentLink: "https://growww-app.herokuapp.com/",
+    },
+];
+
+export const blogsData = [
+    {
+        blogTitle: "Web Developement Vs Web Design",
+        blogDiscription:
+            "A web developer is someone who builds and maintains the core structure of a website. They’re tasked with converting the web design into a functional website, using coding languages such as HTML, JavaScript, CSS and Python.",
+        blogLink:
+            "https://santoshcodes.hashnode.dev/what-is-the-difference-between-web-development-and-web-design",
+    },
+    {
+        blogTitle: "Web Developement Vs Web Design",
+        blogDiscription:
+            "A web developer is someone who builds and maintains the core structure of a website. They’re tasked with converting the web design into a functional website, using coding languages such as HTML, JavaScript, CSS and Python.",
+        blogLink:
+            "https://santoshcodes.hashnode.dev/what-is-the-difference-between-web-development-and-web-design",
+    },
+    {
+        blogTitle: "Web Developement Vs Web Design",
+        blogDiscription:
+            "A web developer is someone who builds and maintains the core structure of a website. They’re tasked with converting the web design into a functional website, using coding languages such as HTML, JavaScript, CSS and Python.",
+        blogLink:
+            "https://santoshcodes.hashnode.dev/what-is-the-difference-between-web-development-and-web-design",
     },
 ];

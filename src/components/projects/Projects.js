@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ProjectComponent } from "./ProjectComponent";
-import { projectsDate } from "../../utils/data";
+import { projectsData } from "../../utils/data";
 import { breakPoint } from "../../utils/breakPoints";
 
 const ProjectContainer = styled.section`
@@ -40,7 +40,7 @@ export const Projects = () => {
             <h2 className="projects">
                 <span>Projects</span>
             </h2>
-            {projectsDate.map((el) => (
+            {projectsData.map((el) => (
                 <ProjectComponent el={el} />
             ))}
         </ProjectContainer>
