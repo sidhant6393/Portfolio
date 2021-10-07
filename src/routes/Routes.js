@@ -8,6 +8,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { About } from "../components/about/About";
 import { Projects } from "../components/projects/Projects";
+import { Footer } from "../components/Footer";
 
 const lottieOption = {
     loop: false,
@@ -53,6 +54,7 @@ export const Routes = () => {
                             <SectionOne theme={theme} setTheme={setTheme} />
                             <About />
                             <Projects />
+                            <Footer />
                         </>
                     )}
                 </ThemeProvider>
