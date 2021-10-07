@@ -1,6 +1,5 @@
-import { Route, Switch } from "react-router"
-import { SectionOne } from "../components/SectionOne"
-
+import { Route, Switch } from "react-router";
+import { SectionOne } from "../components/SectionOne";
 
 import { useEffect, useState } from "react";
 import Lottie from "react-lottie";
@@ -8,7 +7,8 @@ import animationData from "../utils/preloader-animation-data.json";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { About } from "../components/about/About";
-
+import { Projects } from "../components/projects/Projects";
+import { Footer } from "../components/Footer";
 
 const lottieOption = {
     loop: false,
@@ -20,7 +20,6 @@ const lottieOption = {
 };
 
 export const Routes = () => {
-
     const [loding, setLoding] = useState(true);
     const [theme, setTheme] = useState(lightTheme);
 
@@ -44,14 +43,19 @@ export const Routes = () => {
                                 background: theme.bg,
                             }}
                         >
-                            <Lottie options={lottieOption} height={300} width={300} />
+                            <Lottie
+                                options={lottieOption}
+                                height={300}
+                                width={300}
+                            />
                         </div>
                     ) : (
                         <>
                             <SectionOne theme={theme} setTheme={setTheme} />
                             <About />
+                            <Projects />
+                            <Footer />
                         </>
-
                     )}
                 </ThemeProvider>
             </Route>
@@ -63,11 +67,4 @@ export const Routes = () => {
             </Route>
         </Switch>
     );
-
-}
-
-
-
-
-
-
+};
