@@ -26,7 +26,7 @@ export const Routes = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoding(false);
-        }, 5000);
+        }, 3200);
     }, []);
 
     return (

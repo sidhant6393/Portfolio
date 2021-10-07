@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
+import Physics2DPlugin from "gsap/Physics2DPlugin";
+import GSDevTools from "gsap/GSDevTools";
 
 const HomeContainer = styled.div`
     color: ${(props) => props.theme.primaryText};
@@ -30,6 +32,14 @@ const HomeContainer = styled.div`
         .interactive {
             color: ${(props) => props.theme.oppositeTheam};
             cursor: pointer;
+        }
+    }
+
+    .maths-symbol-container {
+        position: relative;
+
+        .symbols {
+            position: absolute;
         }
     }
 
@@ -65,7 +75,111 @@ const Resume = styled.button`
     }
 `;
 
+const arrayOfEmoji = [
+    // "𝛼",
+    // "𝛽",
+    // "𝛾",
+    // "𝛿",
+    // "𝜀",
+    // "𝜁",
+    // "𝜂",
+    // "𝜃",
+    // "𝜄",
+    // "𝜅",
+    // "𝜆",
+    // "𝜇",
+    // "𝜈",
+    // "𝜉",
+    // "𝜋",
+    // "𝜌",
+    // "𝜏",
+    // "𝜎",
+    // "𝜖",
+    // "𝜓",
+    // "𝜔",
+    // "𝜙",
+    // "𝜘",
+    // "𝛺",
+    // "𝛥",
+    "⚽️",
+    "🏀",
+    "🏈",
+    "⚾️",
+    "🥎",
+    "🎾",
+    "🏐",
+    "🏉",
+    "🥏",
+    "🪀",
+    "🎱",
+    "⚽️",
+    "🏀",
+    "🏈",
+    "⚾️",
+    "🥎",
+    "🎾",
+    "🏐",
+    "🏉",
+    "🥏",
+    "🪀",
+    "🎱",
+    "⚽️",
+    "🏀",
+    "🏈",
+    "⚾️",
+    "🥎",
+    "🎾",
+    "🏐",
+    "🏉",
+    "🥏",
+    "🪀",
+    "🎱",
+    "⚽️",
+    "🏀",
+    "🏈",
+    "⚾️",
+    "🥎",
+    "🎾",
+    "🏐",
+    "🏉",
+    "🥏",
+    "🪀",
+    "🎱",
+    "⚽️",
+    "🏀",
+    "🏈",
+    "⚾️",
+];
+
 export const HomeContent = () => {
+    if (typeof window !== "undefined") {
+        gsap.registerPlugin(Physics2DPlugin);
+    }
+
+    const [symbolAnimation, setSymbolAnimation] = useState(gsap.timeline());
+
+    useEffect(() => {
+        gsap.set(".symbols", {
+            scale: "random(1, 2)",
+            opacity: 0,
+        });
+        setSymbolAnimation(
+            symbolAnimation
+                .to(".symbols", {
+                    duration: 3,
+                    opacity: 1,
+                    physics2D: {
+                        velocity: "random(400, 900)",
+                        angle: "random(250, 300)",
+                        gravity: 900,
+                    },
+                    delay: "0.3",
+                })
+                .to(".symbols", { duration: 0, display: "none" })
+        );
+        symbolAnimation.pause();
+    }, []);
+
     useEffect(() => {
         gsap.set(".hand-wave", { transformOrigin: "bottom" });
 
@@ -77,6 +191,15 @@ export const HomeContent = () => {
             duration: 1,
         });
     }, []);
+
+    const handlePhysicsAnimatin = () => {
+        if (symbolAnimation.isActive()) {
+            symbolAnimation.play();
+        } else {
+            symbolAnimation.restart();
+        }
+        console.log("over");
+    };
     return (
         <HomeContainer>
             <div>
@@ -86,8 +209,19 @@ export const HomeContent = () => {
                 <h1 className="name">Santosh Mane</h1>
                 <p className="about-one-line">
                     I like to build{" "}
-                    <span className="interactive"> Interactive</span> things for
-                    web
+                    <span
+                        onMouseOver={handlePhysicsAnimatin}
+                        className="interactive"
+                    >
+                        {" "}
+                        Interactive
+                        <span className="maths-symbol-container">
+                            {arrayOfEmoji.map((symbol) => (
+                                <span className="symbols">{symbol}</span>
+                            ))}
+                        </span>
+                    </span>{" "}
+                    things for web
                 </p>
                 <Resume className="resume">
                     <a href="./resume.pdf">Resume</a>
