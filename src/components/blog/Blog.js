@@ -77,7 +77,7 @@ export const Blog = () => {
             Draggable.create("#card", {
                 bounds: "#boundries",
                 // inertia: true,
-                // zIndexBoost: true,
+                // zIndexBoost: true,//
                 onPress: function () {
                     gsap.to(".note", { opacity: 0 });
                 },
