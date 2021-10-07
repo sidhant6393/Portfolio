@@ -84,6 +84,10 @@ const NavBarContainer = styled.div`
         transform: scale(0.4);
         margin-right: -5%;
         background: ${(props) => props.theme.toggleBg};
+
+        .links {
+            z-index: 10;
+        }
     }
 
     #sun {
@@ -118,12 +122,14 @@ const NavBarContainer = styled.div`
             bottom: 0;
             left: 0;
             display: flex;
-            align-items: space-between;
+            /* align-items: center; */
             justify-content: center;
+            /* z-index: 10 !important; */
             background: ${(props) => props.theme.imageFilter};
         }
         .links > span {
-            font-size: 1em;
+            font-size: 0.8em;
+            transform: translateX(-25%);
         }
         .logo {
             margin-left: 50px;
@@ -131,6 +137,7 @@ const NavBarContainer = styled.div`
         .nav-toggle-container {
             justify-content: flex-end;
             min-width: 200px;
+            /* border: 1px solid #000; */
         }
     }
 `;
