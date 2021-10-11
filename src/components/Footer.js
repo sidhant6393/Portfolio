@@ -37,6 +37,8 @@ const Contacts = styled.footer`
         background: ${(props) => props.theme.buttonBg};
         transform: translateX(-25%);
         color: ${(props) => props.theme.primaryText};
+        font-family: inherit;
+        font-weight: bold;
     }
 `;
 
@@ -144,7 +146,9 @@ export const Footer = () => {
                 </span>
             </div>
             <a href="mailto:santoshmane619@gmail.com">
-                <button className="hello">Say Hello</button>
+                <button className="hello">
+                    <span>Say Hello</span>
+                </button>
             </a>
         </Contacts>
     );
