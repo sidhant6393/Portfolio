@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
 
 const Contacts = styled.footer`
-    border: 1px solid #000;
+    border: 1px solid transparent;
     height: 30vh;
     background: ${(props) => props.theme.primary};
     display: flex;
