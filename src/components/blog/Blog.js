@@ -39,6 +39,7 @@ const BlogContainer = styled.div`
         transform: translateY(-200%);
         opacity: 0.3;
         z-index: 0;
+        color: ${(props) => props.theme.primaryText};
     }
 
     @media (max-width: ${breakPoint.tablet}) {
