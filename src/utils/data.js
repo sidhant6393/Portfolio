@@ -38,16 +38,16 @@ export const projectsData = [
 
 export const blogsData = [
     {
-        blogTitle: "Web Developement Vs Web Design",
+        blogTitle: "blog 2",
         blogDiscription:
-            "A web developer is someone who builds and maintains the core structure of a website. They’re tasked with converting the web design into a functional website, using coding languages such as HTML, JavaScript, CSS and Python.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, suscipit corrupti sed nesciunt, recusandae quaerat neque consequuntur sint dolores quidem reiciendis dignissimos vitae? Repellat iste sunt nulla atque quisquam ullam.",
         blogLink:
             "https://santoshcodes.hashnode.dev/what-is-the-difference-between-web-development-and-web-design",
     },
     {
-        blogTitle: "blog 2",
+        blogTitle: "Web Developement Vs Web Design",
         blogDiscription:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, suscipit corrupti sed nesciunt, recusandae quaerat neque consequuntur sint dolores quidem reiciendis dignissimos vitae? Repellat iste sunt nulla atque quisquam ullam.",
+            "A web developer is someone who builds and maintains the core structure of a website. They’re tasked with converting the web design into a functional website, using coding languages such as HTML, JavaScript, CSS and Python.",
         blogLink:
             "https://santoshcodes.hashnode.dev/what-is-the-difference-between-web-development-and-web-design",
     },
