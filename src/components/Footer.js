@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { breakPoint } from "../utils/breakPoints";
 
 const Contacts = styled.footer`
     border: 1px solid #000;
@@ -39,6 +40,12 @@ const Contacts = styled.footer`
         color: ${(props) => props.theme.primaryText};
         font-family: inherit;
         font-weight: bold;
+    }
+    @media (max-width: ${breakPoint.tablet}) {
+        & {
+            justify-content: flex-start;
+            padding-top: 10px;
+        }
     }
 `;
 
