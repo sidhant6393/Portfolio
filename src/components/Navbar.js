@@ -211,7 +211,7 @@ export const Navbar = ({ theme, setTheme }) => {
                         </span>
                         <span>
                             <HashLink
-                                to="/#blogs"
+                                to="/#blog"
                                 activeClassName="selected"
                                 scroll={(el) => scrollWithOffset(el)}
                             >

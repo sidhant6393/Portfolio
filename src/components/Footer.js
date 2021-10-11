@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { breakPoint } from "../utils/breakPoints";
 
 const Contacts = styled.footer`
-    border: 1px solid #000;
+    border: 1px solid transparent;
     height: 30vh;
     background: ${(props) => props.theme.primary};
     display: flex;
@@ -37,6 +38,14 @@ const Contacts = styled.footer`
         background: ${(props) => props.theme.buttonBg};
         transform: translateX(-25%);
         color: ${(props) => props.theme.primaryText};
+        font-family: inherit;
+        font-weight: bold;
+    }
+    @media (max-width: ${breakPoint.tablet}) {
+        & {
+            justify-content: flex-start;
+            padding-top: 10px;
+        }
     }
 `;
 
@@ -144,7 +153,9 @@ export const Footer = () => {
                 </span>
             </div>
             <a href="mailto:santoshmane619@gmail.com">
-                <button className="hello">Say Hello</button>
+                <button className="hello">
+                    <span>Say Hello</span>
+                </button>
             </a>
         </Contacts>
     );

@@ -22,8 +22,8 @@ const Projects = styled.div`
 
         & > img {
             border-radius: 8px;
-            filter: blur(1px);
-            opacity: 0.7;
+            filter: blur(0.5px);
+            opacity: 0.9;
             transition: all 0.5s ease;
             box-shadow: 0 0 20px -2px #000;
         }
