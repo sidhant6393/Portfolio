@@ -85,7 +85,7 @@ export const Blog = () => {
     }, []);
 
     return (
-        <BlogContainer>
+        <BlogContainer id="blog">
             <div id="boundries">
                 <h2 id="blogs">Blogs</h2>
 
