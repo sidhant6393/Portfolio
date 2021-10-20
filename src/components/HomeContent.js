@@ -224,7 +224,9 @@ export const HomeContent = () => {
                     things for web
                 </p>
                 <Resume className="resume">
-                    <a href="./resume.pdf">Resume</a>
+                    <a href="./resume.pdf" target="_blank">
+                        Resume
+                    </a>
                 </Resume>
             </div>
         </HomeContainer>
