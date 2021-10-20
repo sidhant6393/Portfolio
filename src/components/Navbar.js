@@ -76,7 +76,7 @@ const NavBarContainer = styled.div`
     .switch-toggle {
         height: 96px;
         width: 200px;
-        border: 2px solid ${(props) => props.theme.border};
+        border: 2px solid transparent;
         border-radius: 96px;
         position: relative;
         cursor: pointer;
@@ -109,6 +109,7 @@ const NavBarContainer = styled.div`
     @media (max-width: ${breakPoint.tablet}) {
         .switch-toggle {
             /* transform: translateX(1em); */
+            box-shadow: 0 0 2px 0px rgb(0, 0, 0);
         }
 
         .nav-toggle-container {
