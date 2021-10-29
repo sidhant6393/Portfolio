@@ -14,11 +14,7 @@ export const projectsData = [
     {
         title: "Groww Clone",
         projectImg: projectImage1,
-        about: `- Sign-in/Sign-up page 
-- User Dashboard 
-- Buying Stocks page 
-- User wallet page 
-- User Profile`,
+        about: `This is an e-commerce website, made with express. The MVC File structure is used in this project. All Html is served form backend using view engine. Ejs is used to create html templates. Login/Register,Dashboard, Wallet, User Profile and Landing Page are main features of this project.`,
         tech: [
             "node.js",
             "express",
@@ -33,10 +29,7 @@ export const projectsData = [
     {
         title: "Boat-lifestyle clone",
         projectImg: projectImage2,
-        about: `- Landing Page
-- Sign-in/Sign-up page
-- Cart Page
-- Champions Page`,
+        about: `This is and react application, where we created separate backend and used axios to fetch the data from backend. Using React-Router-Dom different pages and served. Chanpions page, Landing page, login/Signup page, cart page and payment page are the main pages of the application`,
         tech: ["react.js", "styled components", "express", "mongoDB"],
         githubLink: "https://github.com/SushanthPS/Boat-Lifestyle-Clone",
         deploymentLink: "https://growww-app.herokuapp.com/",
