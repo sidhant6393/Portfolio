@@ -29,7 +29,7 @@ export const projectsData = [
     {
         title: "Boat-lifestyle clone",
         projectImg: projectImage2,
-        about: `This is and react application, where we created separate backend and used axios to fetch the data from backend. Using React-Router-Dom different pages and served. Chanpions page, Landing page, login/Signup page, cart page and payment page are the main pages of the application`,
+        about: `This is and react application, where we created separate backend and used axios to fetch the data from backend. Using React-Router-Dom different pages are served. Chanpions page, Landing page, login/Signup page, cart page and payment page are the main pages of the application`,
         tech: ["react.js", "styled components", "express", "mongoDB"],
         githubLink: "https://github.com/SushanthPS/Boat-Lifestyle-Clone",
         deploymentLink: "https://growww-app.herokuapp.com/",
