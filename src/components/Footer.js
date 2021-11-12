@@ -61,6 +61,19 @@ const Contacts = styled.footer`
         font-weight: bold;
     }
     @media (max-width: ${breakPoint.tablet}) {
+        h1 {
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .contact-details {
+            flex-direction: column;
+        }
+        .social-links {
+            margin: 0 auto;
+            margin-top: 3%;
+            width: 100%;
+            justify-content: center;
+        }
         & {
             justify-content: flex-start;
             padding-top: 35px;

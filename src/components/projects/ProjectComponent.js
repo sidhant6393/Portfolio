@@ -59,7 +59,7 @@ const Projects = styled.div`
         padding-right: 2%;
         text-align: end;
         font-weight: lighter;
-        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+        /* box-shadow: 0 5px 20px 0 rgba(99, 99, 99, 0.5); */
     }
     .projects-others {
         grid-column: 7 / span 6;
@@ -94,8 +94,10 @@ const Projects = styled.div`
         margin-left: 10px;
     }
     & img {
+        /* width: 100%; */
+        /* height: 100%; */
         width: 100%;
-        /* height: 300px; */
+        height: 200px;
     }
 
     @media (max-width: ${breakPoint.tablet}) {
@@ -132,7 +134,7 @@ const Projects = styled.div`
             width: 100%;
             left: 0%;
             font-size: 0.6em;
-            text-shadow: rgba(0, 0, 0, 0.5) 1px 0 10px;
+            text-shadow: rgb(255 255 255) 1px 0 10px;
             color: ${(props) => props.theme.primaryText};
             align-items: center;
             justify-content: center;
