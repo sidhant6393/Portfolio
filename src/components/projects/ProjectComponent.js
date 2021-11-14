@@ -94,10 +94,10 @@ const Projects = styled.div`
         margin-left: 10px;
     }
     & img {
-        /* width: 100%; */
-        /* height: 100%; */
+        /* width: 100%;
+        height: 100%; */
         width: 100%;
-        height: 200px;
+        height: 100%;
     }
 
     @media (max-width: ${breakPoint.tablet}) {
@@ -155,6 +155,12 @@ const Projects = styled.div`
                 align-items: center;
                 justify-content: center;
             }
+        }
+        & img {
+            /* width: 100%; */
+            /* height: 100%; */
+            width: 100%;
+            height: 200px;
         }
     }
 `;
