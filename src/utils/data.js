@@ -27,12 +27,12 @@ export const projectsData = [
         deploymentLink: "https://growww-app.herokuapp.com/",
     },
     {
-        title: "Boat-lifestyle clone",
+        title: "Quora Clone",
         projectImg: projectImage2,
-        about: `This is and react application, where we created separate backend and used axios to fetch the data from backend. Using React-Router-Dom different pages are served. Champions page, Landing page, login/Signup page, cart page and payment page are the main pages of the application`,
-        tech: ["react.js", "styled components", "express", "mongoDB"],
-        githubLink: "https://github.com/SushanthPS/Boat-Lifestyle-Clone",
-        deploymentLink: "https://growww-app.herokuapp.com/",
+        about: `This is and react application, Used Redux for global state management. Using React-Router-Dom different pages are served. Login page, Home page, Add question popup page, Question details page and Unanwered Questions page are the main pages of the application`,
+        tech: ["react.js", "styled components", "Redux", "Firebase"],
+        githubLink: "https://github.com/santoshmcode/quora-clone",
+        deploymentLink: "https://quora-app.netlify.app/",
     },
 ];
 
