@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import { SectionOne } from "../components/SectionOne";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "../utils/preloader-animation-data.json";
 import { ThemeProvider } from "styled-components";

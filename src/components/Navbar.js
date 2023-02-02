@@ -2,7 +2,7 @@ import styled from "styled-components";
 import logolight from "../assets/logo-light.svg";
 import logoDark from "../assets/logo-dark.svg";
 import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { darkTheme, lightTheme } from "../styles/theme";
 import { breakPoint } from "../utils/breakPoints";
 import { HashLink } from "react-router-hash-link";

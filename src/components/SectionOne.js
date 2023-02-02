@@ -4,7 +4,7 @@ import { breakPoint } from "../utils/breakPoints";
 import { Hero } from "./Hero";
 import { HomeContent } from "./HomeContent";
 import gsap from "gsap";
-import { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const SectionContainer = styled.div`
     height: 100vh;

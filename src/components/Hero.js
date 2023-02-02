@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
 import gsap from "gsap";
@@ -10,29 +10,39 @@ const HeroContainer = styled.div`
     transform: translateY(-50%);
     height: fit-content;
 
-     @media (max-width: ${breakPoint.tablet}) {
-
-        &{
+    @media (max-width: ${breakPoint.tablet}) {
+        & {
             display: none;
         }
-
-     }
-`
+    }
+`;
 
 export const Hero = () => {
-    const [t2, setT2] = useState(gsap.timeline())
-
+    const [t2, setT2] = useState(gsap.timeline());
 
     useEffect(() => {
         gsap.set(["#terminal"], { scale: 0, transformOrigin: "bottom center" });
-        setT2(t2
-            .from(".line", { scaleX: 0, stagger: 0.2 })
-            .to("#terminal", { scale: 1, ease: "back.out(1.5)", duration: 0.3 })
-            .to("#cursor", { opacity: 0, repeat: -1, yoyo: true, ease: "Power1.easeIn", delay: 0.2 }, "<1")
-        )
-    }, [])
-
-
+        setT2(
+            t2
+                .from(".line", { scaleX: 0, stagger: 0.2 })
+                .to("#terminal", {
+                    scale: 1,
+                    ease: "back.out(1.5)",
+                    duration: 0.3,
+                })
+                .to(
+                    "#cursor",
+                    {
+                        opacity: 0,
+                        repeat: -1,
+                        yoyo: true,
+                        ease: "Power1.easeIn",
+                        delay: 0.2,
+                    },
+                    "<1"
+                )
+        );
+    }, []);
 
     return (
         <HeroContainer>
@@ -411,9 +421,6 @@ export const Hero = () => {
                     </g>
                 </g>
             </svg>
-
-
-
         </HeroContainer>
     );
-}
+};

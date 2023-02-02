@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
 import Physics2DPlugin from "gsap/Physics2DPlugin";
