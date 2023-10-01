@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { breakPoint } from "../utils/breakPoints";
 import Physics2DPlugin from "gsap/Physics2DPlugin";
+// import Resume from "../assets/"
 
 const HomeContainer = styled.div`
     color: ${(props) => props.theme.primaryText};
@@ -199,13 +200,17 @@ export const HomeContent = () => {
         }
         // console.log("over");
     };
+    useEffect(() => {
+        // Set the document title
+        document.title = "Sidhant portfolio";
+    }, []);
     return (
         <HomeContainer>
             <div>
                 <div className="hello">
                     <span className="hand-wave"> 👋🏻 </span> Hi, my name is
                 </div>
-                <h1 className="name">Santosh Mane</h1>
+                <h1 className="name">Sidhant Singh</h1>
                 <p className="about-one-line">
                     I like to build{" "}
                     <span
@@ -224,7 +229,8 @@ export const HomeContent = () => {
                     things for web
                 </p>
                 <Resume className="resume">
-                    <a href="./resume.pdf" target="_blank">
+                    <a href="./Sidhant_Resume.pdf" target="_blank">
+                    
                         Resume
                     </a>
                 </Resume>

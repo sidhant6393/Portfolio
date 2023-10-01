@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { languages } from "../../utils/data";
 import myImage from "../../assets/me.png";
+// import resume from 
 import { breakPoint } from "../../utils/breakPoints";
 
 const AboutContainer = styled.section`
@@ -166,7 +167,7 @@ export const About = () => {
                 </h2>
                 <div className="dis-container">
                     <p className="dis1">
-                        Hello! My name is Santosh and I enjoy creating{" "}
+                        Hello! My name is Sidhant Singh and I enjoy creating{" "}
                         <Link to="">
                             <span className="imp">Fun</span>
                         </Link>

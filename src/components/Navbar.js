@@ -140,6 +140,9 @@ const NavBarContainer = styled.div`
             /* border: 1px solid #000; */
         }
     }
+    .text-red{
+        text:red
+    }
 `;
 
 export const Navbar = ({ theme, setTheme }) => {
@@ -185,9 +188,11 @@ export const Navbar = ({ theme, setTheme }) => {
             <div className="nav-content">
                 <div className="logo">
                     {theme.name === "light" ? (
-                        <img src={logolight} alt={logolight} />
+                        // <img src={logolight} alt={logolight} />
+                        <div style={{ color: 'red' }}>Sidhant Singh</div>
                     ) : (
-                        <img src={logoDark} alt={logoDark} />
+                        // <img src={logoDark} alt={logoDark} />
+                        <div style={{color:"yellow"}}>Sidhant Singh</div>
                     )}
                 </div>
                 <div className="nav-toggle-container">

@@ -86,10 +86,11 @@ export const Footer = () => {
     return (
         <Contacts id="contact">
             <h1>Living, learning, & leveling up one day at a time.</h1>
+            {/* <h1>Let's turn your dreams into a reality. Feel free to drop me a message, and let's embark on this web-tastic adventure together! 🌟</h1> */}
             <div className="social-links">
                 <span>
                     <a
-                        href="https://github.com/santoshmcode"
+                        href="https://github.com/sidhant6393"
                         rel="noreferrer"
                         target="_blank"
                     >
@@ -112,7 +113,7 @@ export const Footer = () => {
 
                 <span>
                     <a
-                        href="https://www.linkedin.com/in/santoshcodes/"
+                        href="https://www.linkedin.com/in/sidhant-singh-8161461b3/"
                         rel="noreferrer"
                         target="_blank"
                     >
@@ -137,7 +138,7 @@ export const Footer = () => {
 
                 <span>
                     <a
-                        href="https://twitter.com/santoshcodes"
+                        href="https://twitter.com/"
                         rel="noreferrer"
                         target="_blank"
                     >
@@ -160,7 +161,7 @@ export const Footer = () => {
 
                 <span>
                     <a
-                        href="https://codepen.io/santoshcodes"
+                        href="https://codepen.io/"
                         rel="noreferrer"
                         target="_blank"
                     >
@@ -206,7 +207,7 @@ export const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            +91 7387373377
+                            +91 6393047479
                         </a>
                     </span>
                 </div>
@@ -227,16 +228,16 @@ export const Footer = () => {
                     <span>
                         {" "}
                         <a href="mailto:santoshmane619@gmail.com">
-                            santoshmane619@gmail.com
+                            sidhantsingh.rec@gmail.com
                         </a>
                     </span>
                 </div>
             </div>
-            {/* <a href="mailto:santoshmane619@gmail.com">
+            <a href="mailto:sidhantsingh.rec@gmail.com">
                 <button className="hello">
                     <span>Say Hello</span>
                 </button>
-            </a> */}
+            </a>
         </Contacts>
     );
 };

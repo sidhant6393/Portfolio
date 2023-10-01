@@ -55,7 +55,7 @@ export const Routes = () => {
                             <SectionOne theme={theme} setTheme={setTheme} />
                             <About />
                             <Projects />
-                            <Blog />
+                            {/* <Blog /> */}
                             <Footer />
                         </>
                     )}
